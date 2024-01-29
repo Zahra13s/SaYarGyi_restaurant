@@ -13,6 +13,12 @@
         android:theme="@style/Theme.SaYarGyi"
         tools:targetApi="31">
         <activity
+            android:name=".fried_chicken_details"
+            android:exported="false" />
+        <activity
+            android:name=".menu"
+            android:exported="false" />
+        <activity
             android:name=".register"
             android:exported="false" />
         <activity
