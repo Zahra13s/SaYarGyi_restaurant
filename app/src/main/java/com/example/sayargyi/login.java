@@ -30,7 +30,7 @@ public class login extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         if (username.getText().toString().equals("user") && password.getText().toString().equals("1234")) {
-                            Intent intent = new Intent(login.this, menu.class);
+                            Intent intent = new Intent(login.this, home.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(login.this, "Login Failed!", Toast.LENGTH_SHORT).show();
