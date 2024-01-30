@@ -30,7 +30,7 @@ public class register extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (username.getText().toString().equals("user") && password.getText().toString().equals("1234")) {
-                    Toast.makeText(register.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(register.this, home.class);
                 } else {
                     Toast.makeText(register.this, "Login Failed!", Toast.LENGTH_SHORT).show();
                 }
