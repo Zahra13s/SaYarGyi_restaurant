@@ -7,9 +7,681 @@
     android:orientation="vertical"
     tools:context=".home">
 
-    <TextView
-        android:id="@+id/textView7"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="HI" />
+        android:layout_height="match_parent" >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_shape"
+                    tools:context=".MainActivity">
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/title"
+                        android:text="Find Food Near You"
+                        android:textColor="@color/black"
+                        android:textSize="22sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/textView"
+                        app:srcCompat="@drawable/profile" />
+
+
+                    <ImageView
+                        android:id="@+id/noti"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="4dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView"
+                        app:layout_constraintTop_toTopOf="@+id/imageView"
+                        app:srcCompat="@drawable/ic_notification" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/search_bg"
+                        android:drawableLeft="@drawable/ic_search_black_24dp"
+                        android:drawablePadding="8dp"
+                        android:ems="10"
+                        android:hint="@android:string/search_go"
+                        android:inputType="textPersonName"
+                        android:paddingStart="16dp"
+                        app:layout_constraintEnd_toStartOf="@+id/sort"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+                    <ImageView
+                        android:id="@+id/sort"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/editText"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/editText"
+                        app:srcCompat="@drawable/ic_short" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"></LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+
+                    app:srcCompat="@drawable/slider_one"
+                    tools:layout_margin="10dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/category_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/menu_title"
+                android:text="Select By Category"
+                android:textColor="@color/button_color"
+                android:textSize="22dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:id="@+id/imageButton13"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/image_btn_background"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/grilled" />
+
+
+
+
+                <ImageButton
+                    android:id="@+id/imageButton12"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/image_btn_background"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/drink" />
+
+
+
+
+                <ImageButton
+                    android:id="@+id/imageButton11"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/image_btn_background"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dish" />
+
+
+
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/image_btn_background"
+                    android:padding="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/fast_food" />
+
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/menu_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/menu_title"
+                android:text="Select By Category"
+                android:textColor="@color/button_color"
+                android:textSize="22dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+                <!--1. fried chicken-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/button_color"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+                        <!--fried chicken image-->
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/fried_chicken" />
+                        <!--fried chicken-->
+                        <TextView
+                            android:id="@+id/textView1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/menu_title"
+                            android:paddingBottom="3dp"
+                            android:text="Fried Chicken"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView1"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+
+                        <!--waiting time-->
+                        <ImageView
+                            android:id="@+id/imageView1_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:layout_constraintStart_toStartOf="@+id/textView1_1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView1_1"
+                            app:srcCompat="@drawable/hourglass" />
+
+
+                        <TextView
+                            android:id="@+id/textView1_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="5s"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView1_3"
+                            app:layout_constraintStart_toEndOf="@+id/imageView1_3"
+                            app:layout_constraintTop_toTopOf="@+id/imageView1_3" />
+
+
+                        <!--price-->
+                        <ImageView
+                            android:id="@+id/imageView1_1"
+                            android:layout_width="20dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="3dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView1_3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView1_3"
+                            app:srcCompat="@drawable/coins" />
+
+
+                        <TextView
+                            android:id="@+id/textView1_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="2500Ks"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView1_1"
+                            app:layout_constraintStart_toEndOf="@+id/imageView1_1"
+                            app:layout_constraintTop_toTopOf="@+id/imageView1_1" />
+
+
+                        <!--add to cart-->
+                        <ImageButton
+                            android:id="@+id/imageButton1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/inset_shadow"
+                            android:contentDescription="Add to Cart"
+                            android:padding="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add_to_cart"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView1_1" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <!--2. korea fried chicken-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/button_color"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+                        <!--korea fried chicken image-->
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:srcCompat="@drawable/korea_fried_chicken" />
+                        <!--korea fried chicken-->
+                        <TextView
+                            android:id="@+id/textView2_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/menu_title"
+                            android:paddingBottom="3dp"
+                            android:text="Korea Fried Chicken"
+                            android:textColor="@color/white"
+                            android:textSize="19dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView2"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+
+                        <!--waiting time-->
+                        <ImageView
+                            android:id="@+id/imageView2_1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:layout_constraintStart_toStartOf="@+id/textView2_1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2_1"
+                            app:srcCompat="@drawable/hourglass" />
+
+
+                        <TextView
+                            android:id="@+id/textView2_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="5s"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView2_1"
+                            app:layout_constraintStart_toEndOf="@+id/imageView2_1"
+                            app:layout_constraintTop_toTopOf="@+id/imageView2_1" />
+                        <!--price-->
+                        <ImageView
+                            android:id="@+id/imageView2_2"
+                            android:layout_width="20dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="3dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView2_1"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2_1"
+                            app:srcCompat="@drawable/coins" />
+
+
+                        <TextView
+                            android:id="@+id/textView2_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="2500Ks"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView2_2"
+                            app:layout_constraintStart_toEndOf="@+id/imageView2_2"
+                            app:layout_constraintTop_toTopOf="@+id/imageView2_2" />
+                        <!--add to cart-->
+                        <ImageButton
+                            android:id="@+id/imageButton2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/inset_shadow"
+                            android:contentDescription="Add to Cart"
+                            android:padding="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add_to_cart"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2_1" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+
+                <!--3. chicken katsu-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/button_color"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+
+                        <!--chicken katsu image-->
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/chicken_katsu" />
+
+
+                        <!--chicken katsu-->
+                        <TextView
+                            android:id="@+id/textView3_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/menu_title"
+                            android:paddingBottom="3dp"
+                            android:text="Chicken Katsu"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+
+                        <!--waiting time-->
+                        <ImageView
+                            android:id="@+id/imageView3_3"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:layout_constraintStart_toStartOf="@+id/textView3_1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3_1"
+                            app:srcCompat="@drawable/hourglass" />
+
+
+                        <TextView
+                            android:id="@+id/textView3_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="5s"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView3_3"
+                            app:layout_constraintStart_toEndOf="@+id/imageView3_3"
+                            app:layout_constraintTop_toTopOf="@+id/imageView3_3" />
+
+
+                        <!--price-->
+                        <ImageView
+                            android:id="@+id/imageView3_1"
+                            android:layout_width="20dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="3dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3_3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView3_3"
+                            app:srcCompat="@drawable/coins" />
+
+
+                        <TextView
+                            android:id="@+id/textView3_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="2500Ks"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView3_1"
+                            app:layout_constraintStart_toEndOf="@+id/imageView3_1"
+                            app:layout_constraintTop_toTopOf="@+id/imageView3_1" />
+
+
+                        <!--add to cart-->
+                        <ImageButton
+                            android:id="@+id/imageButton3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/inset_shadow"
+                            android:contentDescription="Add to Cart"
+                            android:padding="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add_to_cart"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3_1" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--4. beef steak-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/button_color"
+                    app:cardCornerRadius="10dp">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+
+                        <!--beef steak image-->
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="170dp"
+                            android:layout_height="170dp"
+                            android:layout_weight="1"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/fried_chicken"
+                            tools:srcCompat="@drawable/beef_steak" />
+
+
+                        <!--beef steak-->
+                        <TextView
+                            android:id="@+id/textView4_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/menu_title"
+                            android:paddingBottom="3dp"
+                            android:text="Beef Steak"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView4"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+
+                        <!--waiting time-->
+                        <ImageView
+                            android:id="@+id/imageView4_1"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            app:layout_constraintStart_toStartOf="@+id/textView4_1"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4_1"
+                            app:srcCompat="@drawable/hourglass" />
+
+
+                        <TextView
+                            android:id="@+id/textView4_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="5s"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView4_1"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4_1"
+                            app:layout_constraintTop_toTopOf="@+id/imageView4_1" />
+
+
+                        <!--price-->
+                        <ImageView
+                            android:id="@+id/imageView4_2"
+                            android:layout_width="20dp"
+                            android:layout_height="22dp"
+                            android:layout_marginTop="3dp"
+                            app:layout_constraintStart_toStartOf="@+id/imageView4_1"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView4_1"
+                            app:srcCompat="@drawable/coins" />
+
+
+                        <TextView
+                            android:id="@+id/textView4_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/general"
+                            android:paddingLeft="5dp"
+                            android:text="2500Ks"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView4_2"
+                            app:layout_constraintStart_toEndOf="@+id/imageView4_2"
+                            app:layout_constraintTop_toTopOf="@+id/imageView4_2" />
+
+
+                        <!--add to cart-->
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/inset_shadow"
+                            android:contentDescription="Add to Cart"
+                            android:padding="10dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/add_to_cart"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                            app:layout_constraintTop_toBottomOf="@+id/textView4_1" />
+
+
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
+
